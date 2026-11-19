@@ -11,12 +11,9 @@
 
 :root{
   --black:#171717;
-  --dark:#242424;
   --gold:#c4a36a;
   --cream:#f7f5f0;
-  --white:#fff;
   --green:#168653;
-  --muted:#777;
   --border:#e9e5dc;
 }
 
@@ -27,12 +24,10 @@ body{
   font-family:'Cairo',Arial,sans-serif;
   background:#fff;
   color:var(--black);
-  padding-bottom:100px;
+  padding-bottom:95px;
 }
 
-button,input,select,textarea{
-  font-family:inherit;
-}
+button,input,select,textarea{font-family:inherit}
 
 .container{
   width:min(100%,720px);
@@ -59,22 +54,19 @@ header{
 .logo-sub{
   font-size:11px;
   color:#ddd;
-  letter-spacing:1px;
 }
 
-/* HERO IMAGE */
+/* IMAGE */
 
 .hero{
   width:100%;
   background:#f7f5f0;
-  overflow:hidden;
 }
 
 .hero img{
   display:block;
   width:100%;
   height:auto;
-  max-height:none;
   object-fit:contain;
 }
 
@@ -97,7 +89,7 @@ header{
   font-size:14px;
 }
 
-/* PRODUCT INFO */
+/* INFO */
 
 .info{
   background:var(--cream);
@@ -128,7 +120,6 @@ header{
 .info-item strong{
   display:block;
   font-size:14px;
-  margin-bottom:2px;
 }
 
 .available-colors{
@@ -142,14 +133,11 @@ header{
 
 .available-colors strong{
   display:block;
-  margin-bottom:3px;
 }
 
-/* SECTION */
+/* SECTIONS */
 
-.section{
-  margin:25px 0;
-}
+.section{margin:25px 0}
 
 .section-heading{
   display:flex;
@@ -181,10 +169,11 @@ header{
 .offer{
   border:1px solid var(--border);
   border-radius:14px;
-  padding:15px 8px;
+  padding:13px 8px;
   text-align:center;
   background:#fff;
-  position:relative;
+  cursor:pointer;
+  transition:.2s;
 }
 
 .offer.best{
@@ -192,27 +181,51 @@ header{
   border:2px solid var(--gold);
 }
 
+.offer.selected{
+  border:2px solid var(--green);
+  background:#f0faf4;
+  box-shadow:0 3px 12px #16865320;
+}
+
 .offer-label{
   font-size:11px;
   color:#8b6b37;
   font-weight:800;
-  margin-bottom:5px;
+  margin-bottom:4px;
 }
 
 .offer-number{
-  font-size:24px;
+  font-size:21px;
   font-weight:900;
 }
 
+.offer-equation{
+  font-size:14px;
+  font-weight:900;
+  margin:5px 0;
+}
+
 .offer-price{
-  font-size:19px;
+  font-size:20px;
   font-weight:900;
   color:var(--green);
 }
 
-.offer small{
-  color:#777;
-  font-size:11px;
+.offer button{
+  width:100%;
+  margin-top:9px;
+  background:var(--black);
+  color:#fff;
+  border:0;
+  border-radius:9px;
+  padding:9px 4px;
+  font-size:12px;
+  font-weight:800;
+  cursor:pointer;
+}
+
+.offer.selected button{
+  background:var(--green);
 }
 
 /* COLORS */
@@ -255,8 +268,8 @@ header{
 }
 
 .quantity-controls button{
-  width:33px;
-  height:33px;
+  width:34px;
+  height:34px;
   border:0;
   border-radius:9px;
   font-size:23px;
@@ -310,13 +323,21 @@ header{
   display:flex;
   justify-content:space-between;
   align-items:center;
+  gap:8px;
   padding:9px 0;
   border-bottom:1px solid #e6e1d8;
   font-size:14px;
 }
 
-.calc-row:last-child{
-  border:0;
+.calc-row:last-child{border:0}
+
+.calc-row strong{
+  text-align:left;
+}
+
+.equation-row{
+  color:#8b6b37;
+  font-weight:900;
 }
 
 .total-row{
@@ -328,15 +349,12 @@ header{
 /* FORM */
 
 .form-box{
-  background:#fff;
   border:1px solid var(--border);
   border-radius:16px;
   padding:17px;
 }
 
-.form-group{
-  margin-bottom:13px;
-}
+.form-group{margin-bottom:13px}
 
 .form-group label{
   display:block;
@@ -404,11 +422,6 @@ header{
   cursor:pointer;
 }
 
-.main-button:disabled{
-  background:#aaa;
-  cursor:not-allowed;
-}
-
 /* FIXED BUTTON */
 
 .fixed-order{
@@ -474,9 +487,7 @@ header{
   padding:20px;
 }
 
-.modal-box h2{
-  margin-top:0;
-}
+.modal-box h2{margin-top:0}
 
 .summary-text{
   white-space:pre-line;
@@ -494,24 +505,19 @@ header{
   gap:10px;
 }
 
-.cancel-button{
+.cancel-button,.send-button{
   border:0;
   border-radius:10px;
-  background:#eee;
-  padding:13px;
-  font-weight:800;
-}
-
-.send-button{
-  border:0;
-  border-radius:10px;
-  background:var(--green);
-  color:#fff;
   padding:13px;
   font-weight:900;
 }
 
-/* FOOTER */
+.cancel-button{background:#eee}
+
+.send-button{
+  background:var(--green);
+  color:#fff;
+}
 
 footer{
   background:var(--black);
@@ -528,7 +534,6 @@ footer{
   }
   .swatch{height:75px}
 }
-
 </style>
 </head>
 
@@ -539,7 +544,7 @@ footer{
   <div class="logo-sub">فرصتك للأناقة</div>
 </header>
 
-<!-- الصورة الرئيسية الطويلة -->
+<!-- الصورة الطويلة -->
 <div class="hero">
   <img
     src="https://drive.google.com/thumbnail?id=18_Pz1LwmHocA_5fG_Hy7eQ2d9gmRqqPw&sz=w1600"
@@ -599,42 +604,75 @@ footer{
       <span></span>
     </div>
 
+    <p style="font-size:13px;color:#777;margin-top:-7px">
+      اضغطي على العرض المناسب، وبعدها اختاري ألوانك.
+    </p>
+
     <div class="offers">
 
-      <div class="offer">
+      <div class="offer" id="offer-4">
         <div class="offer-label">عرض البداية</div>
         <div class="offer-number">4 قطع</div>
+        <div class="offer-equation">4 × 75 =</div>
         <div class="offer-price">300 جنيه</div>
-        <small>75 جنيه للقطعة</small>
+        <button onclick="chooseOffer(4)">اختاري العرض</button>
       </div>
 
-      <div class="offer">
+      <div class="offer" id="offer-5">
         <div class="offer-label">عرض مميز</div>
         <div class="offer-number">5 قطع</div>
+        <div class="offer-equation">5 × 75 =</div>
         <div class="offer-price">375 جنيه</div>
-        <small>75 جنيه للقطعة</small>
+        <button onclick="chooseOffer(5)">اختاري العرض</button>
       </div>
 
-      <div class="offer">
+      <div class="offer" id="offer-6">
         <div class="offer-label">توفير أكبر</div>
-        <div class="offer-number">6 - 9 قطع</div>
-        <div class="offer-price">70 جنيه</div>
-        <small>سعر القطعة</small>
+        <div class="offer-number">6 قطع</div>
+        <div class="offer-equation">6 × 70 =</div>
+        <div class="offer-price">420 جنيه</div>
+        <button onclick="chooseOffer(6)">اختاري العرض</button>
       </div>
 
-      <div class="offer best">
+      <div class="offer" id="offer-7">
+        <div class="offer-label">عرض 7 قطع</div>
+        <div class="offer-number">7 قطع</div>
+        <div class="offer-equation">7 × 70 =</div>
+        <div class="offer-price">490 جنيه</div>
+        <button onclick="chooseOffer(7)">اختاري العرض</button>
+      </div>
+
+      <div class="offer" id="offer-8">
+        <div class="offer-label">عرض 8 قطع</div>
+        <div class="offer-number">8 قطع</div>
+        <div class="offer-equation">8 × 70 =</div>
+        <div class="offer-price">560 جنيه</div>
+        <button onclick="chooseOffer(8)">اختاري العرض</button>
+      </div>
+
+      <div class="offer" id="offer-9">
+        <div class="offer-label">عرض 9 قطع</div>
+        <div class="offer-number">9 قطع</div>
+        <div class="offer-equation">9 × 70 =</div>
+        <div class="offer-price">630 جنيه</div>
+        <button onclick="chooseOffer(9)">اختاري العرض</button>
+      </div>
+
+      <div class="offer best" id="offer-10" style="grid-column:1/-1">
         <div class="offer-label">⭐ العرض الأكثر توفيراً</div>
         <div class="offer-number">10 قطع فأكثر</div>
-        <div class="offer-price">65 جنيه</div>
-        <small>سعر القطعة</small>
+        <div class="offer-equation">10 × 65 =</div>
+        <div class="offer-price">650 جنيه</div>
+        <small>65 جنيه للقطعة مهما زاد العدد</small>
+        <button onclick="chooseOffer(10)">اختاري العرض</button>
       </div>
 
     </div>
 
   </section>
 
-  <!-- اختيار الألوان -->
-  <section class="section">
+  <!-- الألوان -->
+  <section class="section" id="colorSection">
 
     <div class="section-heading">
       <h2>اختاري الألوان والكميات</h2>
@@ -650,8 +688,8 @@ footer{
     <div class="counter-box">
       <div>
         إجمالي القطع المختارة
-        <div style="font-size:12px;color:#ccc">
-          أقل طلب 4 قطع
+        <div style="font-size:12px;color:#ccc" id="selectionHint">
+          اختاري العرض أولاً
         </div>
       </div>
       <strong><span id="count">0</span> قطعة</strong>
@@ -675,6 +713,16 @@ footer{
       </div>
 
       <div class="calc-row">
+        <span>سعر القطعة</span>
+        <strong id="unitPrice">—</strong>
+      </div>
+
+      <div class="calc-row equation-row">
+        <span>حساب المنتجات</span>
+        <strong id="equation">اختاري الكمية</strong>
+      </div>
+
+      <div class="calc-row">
         <span>سعر المنتجات</span>
         <strong id="productPrice">0 جنيه</strong>
       </div>
@@ -685,7 +733,7 @@ footer{
       </div>
 
       <div class="calc-row total-row">
-        <span>الإجمالي</span>
+        <span>الإجمالي النهائي</span>
         <strong id="finalPrice">0 جنيه</strong>
       </div>
 
@@ -693,7 +741,7 @@ footer{
 
   </section>
 
-  <!-- بيانات العميل -->
+  <!-- البيانات -->
   <section class="section">
 
     <div class="section-heading">
@@ -785,27 +833,22 @@ footer{
   فرصتك للأناقة ❤️
 </footer>
 
-<!-- زر الطلب الثابت -->
+<!-- زر ثابت -->
 <div class="fixed-order">
   <div class="fixed-inner">
-
     <div class="fixed-total">
       إجمالي طلبك
       <strong id="fixedTotal">0 جنيه</strong>
     </div>
-
-    <button onclick="reviewOrder()">
-      اطلب الآن
-    </button>
-
+    <button onclick="reviewOrder()">اطلب الآن</button>
   </div>
 </div>
 
-<!-- نافذة مراجعة الطلب -->
+<!-- نافذة الفاتورة -->
 <div class="modal" id="reviewModal">
   <div class="modal-box">
 
-    <h2>مراجعة طلبك ❤️</h2>
+    <h2>مراجعة فاتورتك ❤️</h2>
 
     <div class="summary-text" id="summaryText"></div>
 
@@ -851,9 +894,10 @@ const quantities = {};
 
 colors.forEach(c => quantities[c.name] = 0);
 
+let selectedOffer = null;
 let currentOrder = null;
 
-/* عرض مربعات الألوان */
+/* عرض الألوان */
 
 function renderColors(){
 
@@ -864,8 +908,7 @@ function renderColors(){
     <div class="color-card">
 
       <div class="swatch"
-        style="background:${color.code};
-        ${color.name==="أبيض" ? "border:1px solid #bbb;" : ""}">
+        style="background:${color.code}">
       </div>
 
       <div class="color-name">${color.name}</div>
@@ -873,18 +916,12 @@ function renderColors(){
       <div class="quantity-controls">
 
         <button class="minus"
-          onclick="changeQty('${color.name}',-1)"
-          aria-label="تقليل ${color.name}">
-          −
-        </button>
+          onclick="changeQty('${color.name}',-1)">−</button>
 
         <span class="qty" id="qty-${index}">0</span>
 
         <button class="plus"
-          onclick="changeQty('${color.name}',1)"
-          aria-label="زيادة ${color.name}">
-          +
-        </button>
+          onclick="changeQty('${color.name}',1)">+</button>
 
       </div>
 
@@ -894,32 +931,86 @@ function renderColors(){
 
 }
 
-/* تغيير الكمية */
+/* اختيار العرض */
+
+function chooseOffer(number){
+
+  const currentCount = getCount();
+
+  if(currentCount > 0){
+
+    const ok = confirm(
+      "اختيار عرض جديد سيعيد ضبط الألوان والكميات الحالية. هل تريدين المتابعة؟"
+    );
+
+    if(!ok) return;
+
+  }
+
+  colors.forEach(c => quantities[c.name] = 0);
+
+  selectedOffer = number;
+
+  document.querySelectorAll(".offer").forEach(el=>{
+    el.classList.remove("selected");
+  });
+
+  document.getElementById("offer-"+number)
+    .classList.add("selected");
+
+  renderColors();
+
+  document.getElementById("selectionHint").textContent =
+    number === 10
+    ? "اختاري 10 قطع على الأقل"
+    : "اختاري "+number+" قطع بالضبط";
+
+  updateTotals();
+
+  document.getElementById("colorSection")
+    .scrollIntoView({behavior:"smooth",block:"start"});
+
+}
+
+/* تغيير الكميات */
 
 function changeQty(name,change){
 
-  let next = quantities[name] + change;
-
-  if(next < 0) return;
-
   const total = getCount();
 
-  if(change > 0 && total >= 30){
-    alert("الحد الأقصى للاختيار في الطلب الواحد 30 قطعة.");
-    return;
+  if(change < 0 && quantities[name] === 0) return;
+
+  if(change > 0){
+
+    if(selectedOffer && selectedOffer !== 10 &&
+       total >= selectedOffer){
+
+      alert("اختاري عدد القطع المحدد في العرض.");
+
+      return;
+    }
+
+    if(total >= 99){
+
+      alert("وصلتي للحد الأقصى للاختيار.");
+
+      return;
+    }
+
   }
 
-  quantities[name] = next;
+  quantities[name] += change;
 
   const index = colors.findIndex(c=>c.name===name);
 
-  document.getElementById("qty-"+index).textContent = next;
+  document.getElementById("qty-"+index).textContent =
+    quantities[name];
 
   updateTotals();
 
 }
 
-/* إجمالي القطع */
+/* إجمالي الكمية */
 
 function getCount(){
 
@@ -928,20 +1019,31 @@ function getCount(){
 
 }
 
-/* حساب سعر المنتجات */
+/* سعر القطعة */
+
+function getUnitPrice(count){
+
+  if(count >= 10) return 65;
+
+  if(count >= 6) return 70;
+
+  if(count >= 4) return 75;
+
+  return 0;
+
+}
+
+/* سعر المنتجات */
 
 function getProductPrice(count){
-
-  if(count < 4) return 0;
 
   if(count === 4) return 300;
 
   if(count === 5) return 375;
 
-  if(count >= 6 && count <= 9)
-    return count * 70;
+  if(count >= 6) return count * getUnitPrice(count);
 
-  return count * 65;
+  return 0;
 
 }
 
@@ -957,40 +1059,55 @@ function getShipping(){
 
   if(!governorate) return null;
 
-  // المناطق ذات الشحن 120 جنيه
+  // شحن 120 جنيه
 
-  if(
-    governorate === "الوادي الجديد" ||
-    governorate === "البحر الأحمر" ||
-    governorate === "مطروح"
-  ){
+  if([
+    "الوادي الجديد",
+    "البحر الأحمر",
+    "مطروح"
+  ].includes(governorate)){
     return 120;
   }
 
-  // مناطق الشحن 95 جنيه
+  // شحن 95 جنيه
 
-  if(
-    governorate === "الفيوم" ||
-    ["بني سويف","المنيا","أسيوط","سوهاج",
-     "قنا","الأقصر","أسوان"].includes(governorate)
-  ){
+  if([
+    "الفيوم",
+    "بني سويف",
+    "المنيا",
+    "أسيوط",
+    "سوهاج",
+    "قنا",
+    "الأقصر",
+    "أسوان"
+  ].includes(governorate)){
     return 95;
   }
 
-  // مناطق خاصة داخل الجيزة
-
-  const lowerAddress = address.toLowerCase();
+  // الصف والعياط
 
   if(
-    lowerAddress.includes("الصف") ||
-    lowerAddress.includes("العياط") ||
-    lowerAddress.includes("el saff") ||
-    lowerAddress.includes("el ayat")
+    address.includes("الصف") ||
+    address.includes("العياط")
   ){
     return 95;
   }
 
   return 70;
+
+}
+
+/* المعادلة */
+
+function getEquation(count){
+
+  if(count < 4) return "اختاري 4 قطع على الأقل";
+
+  const unit = getUnitPrice(count);
+
+  const product = getProductPrice(count);
+
+  return `${count} × ${unit} = ${product} جنيه`;
 
 }
 
@@ -1000,6 +1117,8 @@ function updateTotals(){
 
   const count = getCount();
 
+  const unit = getUnitPrice(count);
+
   const product = getProductPrice(count);
 
   const shipping = getShipping();
@@ -1007,44 +1126,71 @@ function updateTotals(){
   document.getElementById("count").textContent = count;
 
   document.getElementById("calcCount").textContent =
-    count + " قطعة";
+    count+" قطعة";
+
+  document.getElementById("unitPrice").textContent =
+    unit ? unit+" جنيه" : "—";
+
+  document.getElementById("equation").textContent =
+    getEquation(count);
 
   document.getElementById("productPrice").textContent =
-    product + " جنيه";
+    product+" جنيه";
 
   document.getElementById("shippingPrice").textContent =
-    shipping === null ? "حدد المحافظة" : shipping + " جنيه";
+    shipping === null ? "حدد المحافظة" : shipping+" جنيه";
 
-  const total =
-    shipping === null ? product : product + shipping;
+  const total = shipping === null
+    ? product
+    : product + shipping;
 
   document.getElementById("finalPrice").textContent =
-    total + " جنيه";
+    total+" جنيه";
 
   document.getElementById("fixedTotal").textContent =
-    total + " جنيه";
+    total+" جنيه";
 
 }
 
-/* تفاصيل الألوان المختارة */
+/* الألوان المختارة */
 
 function getSelectedColors(){
 
   return colors
-    .filter(c=>quantities[c.name] > 0)
+    .filter(c=>quantities[c.name]>0)
     .map(c=>`${c.name}: ${quantities[c.name]} قطعة`);
 
 }
 
-/* مراجعة الطلب */
+/* مراجعة الفاتورة */
 
 function reviewOrder(){
 
   const count = getCount();
 
   if(count < 4){
-    alert("من فضلك اختاري 4 قطع على الأقل لإتمام الطلب.");
+
+    alert("اختاري 4 قطع على الأقل لإتمام الطلب.");
+
     return;
+
+  }
+
+  if(selectedOffer && selectedOffer !== 10 &&
+     count !== selectedOffer){
+
+    alert("لازم تختاري عدد القطع المحدد في العرض.");
+
+    return;
+
+  }
+
+  if(selectedOffer === 10 && count < 10){
+
+    alert("عرض 10 قطع يبدأ من 10 قطع.");
+
+    return;
+
   }
 
   const name =
@@ -1063,26 +1209,32 @@ function reviewOrder(){
     document.getElementById("address").value.trim();
 
   if(!name || !phone || !governorate || !address){
+
     alert("من فضلك استكملي بيانات الاسم والموبايل والمحافظة والعنوان.");
+
     return;
+
   }
 
   if(!/^[0-9+\s-]{10,15}$/.test(phone)){
+
     alert("من فضلك اكتبي رقم موبايل صحيح.");
+
     return;
+
   }
 
   if(phone2 && !/^[0-9+\s-]{10,15}$/.test(phone2)){
+
     alert("راجعي الرقم البديل من فضلك.");
+
     return;
+
   }
 
   const shipping = getShipping();
 
-  if(shipping === null){
-    alert("اختاري المحافظة.");
-    return;
-  }
+  const unit = getUnitPrice(count);
 
   const product = getProductPrice(count);
 
@@ -1095,13 +1247,17 @@ function reviewOrder(){
     governorate,
     address,
     count,
+    unit,
     product,
     shipping,
     total,
+    equation:getEquation(count),
     selected:getSelectedColors()
   };
 
   const summary = `
+🛍️ فاتورة طلبك من FORSA.COM
+
 الاسم: ${name}
 
 رقم الموبايل: ${phone}
@@ -1122,13 +1278,21 @@ ${currentOrder.selected.join("\n")}
 
 ----------------------
 
-إجمالي القطع: ${count}
+عدد القطع: ${count}
+
+سعر القطعة: ${unit} جنيه
+
+حساب المنتجات:
+${count} × ${unit} = ${product} جنيه
 
 سعر المنتجات: ${product} جنيه
 
-الشحن: ${shipping} جنيه
+مصاريف الشحن: ${shipping} جنيه
 
-الإجمالي النهائي: ${total} جنيه
+الإجمالي النهائي:
+${product} + ${shipping} = ${total} جنيه
+
+❤️ شكراً لثقتك في FORSA.COM
 `;
 
   document.getElementById("summaryText").textContent =
@@ -1139,7 +1303,7 @@ ${currentOrder.selected.join("\n")}
 
 }
 
-/* إغلاق المراجعة */
+/* إغلاق الفاتورة */
 
 function closeModal(){
 
@@ -1148,7 +1312,7 @@ function closeModal(){
 
 }
 
-/* إرسال الطلب إلى واتساب */
+/* إرسال واتساب */
 
 function sendOrder(){
 
@@ -1176,11 +1340,15 @@ ${o.selected.join("\n")}
 
 عدد القطع: ${o.count}
 
-سعر المنتجات: ${o.product} جنيه
+سعر القطعة: ${o.unit} جنيه
+
+حساب المنتجات:
+${o.count} × ${o.unit} = ${o.product} جنيه
 
 الشحن: ${o.shipping} جنيه
 
-الإجمالي: ${o.total} جنيه
+الإجمالي:
+${o.product} + ${o.shipping} = ${o.total} جنيه
 
 برجاء تأكيد الطلب ❤️
 `;
@@ -1198,7 +1366,6 @@ ${o.selected.join("\n")}
 /* تشغيل المتجر */
 
 renderColors();
-
 updateTotals();
 
 </script>
