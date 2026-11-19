@@ -21,12 +21,7 @@ header{
   text-align:center;
   padding:17px 10px;
 }
-.logo{
-  font-size:27px;
-  font-weight:900;
-  letter-spacing:2px;
-  color:#d6bd83;
-}
+.logo{font-size:27px;font-weight:900;letter-spacing:2px;color:#d6bd83}
 .tagline{font-size:13px;margin-top:5px;color:#eee}
 .container{max-width:850px;margin:auto;padding:14px}
 .hero{
@@ -43,17 +38,9 @@ header{
   margin:15px 0;
   box-shadow:0 3px 14px #0000000a;
 }
-h2{
-  font-size:19px;
-  margin:0 0 15px;
-  color:#252525;
-}
-.subtitle{
-  font-size:13px;
-  color:#777;
-  margin-top:-8px;
-  margin-bottom:15px;
-}
+h2{font-size:19px;margin:0 0 15px;color:#252525}
+.subtitle{font-size:13px;color:#777;margin-top:-8px;margin-bottom:15px}
+
 .offers{
   display:grid;
   grid-template-columns:repeat(2,minmax(0,1fr));
@@ -68,7 +55,6 @@ h2{
   cursor:pointer;
   touch-action:manipulation;
   transition:.15s;
-  position:relative;
   user-select:none;
 }
 .offer:active{transform:scale(.98)}
@@ -77,20 +63,9 @@ h2{
   background:#f8f1df;
   box-shadow:0 0 0 2px #b6985522;
 }
-.offer strong{
-  display:block;
-  font-size:20px;
-  color:#222;
-  margin-bottom:6px;
-}
+.offer strong{display:block;font-size:20px;color:#222;margin-bottom:6px}
 .offer .details{font-size:13px;color:#666;line-height:1.8}
-.offer .total{
-  display:block;
-  font-size:19px;
-  font-weight:bold;
-  color:#9a7837;
-  margin-top:5px;
-}
+.offer .total{display:block;font-size:19px;font-weight:bold;color:#9a7837;margin-top:5px}
 .offer button{
   margin-top:10px;
   border:0;
@@ -102,21 +77,22 @@ h2{
   pointer-events:none;
 }
 .offer.selected button{background:#a4874c}
+
 .colors-grid{
   display:grid;
-  grid-template-columns:repeat(4,minmax(0,1fr));
-  gap:13px 9px;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:13px 10px;
 }
 .color-card{
+  min-width:0;
   border:1px solid #eee;
   border-radius:11px;
-  padding:9px 5px;
+  padding:10px 5px;
   text-align:center;
   background:#fff;
 }
 .swatch{
-  width:43px;
-  height:43px;
+  width:43px;height:43px;
   border-radius:50%;
   margin:0 auto 7px;
   border:2px solid #ddd;
@@ -127,18 +103,33 @@ h2{
   display:flex;
   justify-content:center;
   align-items:center;
-  gap:9px;
-  margin-top:8px;
+  gap:8px;
+  margin-top:10px;
+  width:100%;
+  direction:ltr;
 }
 .quantity button{
-  width:31px;height:31px;
-  border:0;border-radius:8px;
-  background:#222;color:white;
-  font-size:21px;line-height:1;
+  flex:0 0 32px;
+  width:32px;
+  height:32px;
+  padding:0;
+  border:0;
+  border-radius:8px;
+  background:#222;
+  color:white;
+  font-size:21px;
+  line-height:32px;
+  text-align:center;
   cursor:pointer;
   touch-action:manipulation;
 }
-.quantity span{font-weight:bold;min-width:18px}
+.quantity span{
+  flex:0 0 18px;
+  min-width:18px;
+  text-align:center;
+  font-weight:bold;
+  font-size:14px;
+}
 .counter{
   background:#f5f0e5;
   padding:12px;
@@ -169,16 +160,13 @@ label{font-size:13px;font-weight:bold}
 .summary-row{
   display:flex;
   justify-content:space-between;
+  align-items:center;
   gap:10px;
   border-bottom:1px dashed #ddd;
   padding:5px 0;
 }
 .summary-row:last-child{border:0}
-.total-row{
-  font-size:18px;
-  font-weight:bold;
-  color:#8b6b30;
-}
+.total-row{font-size:18px;font-weight:bold;color:#8b6b30}
 .policy{
   background:#f8f5ed;
   border-radius:12px;
@@ -196,7 +184,6 @@ label{font-size:13px;font-weight:bold}
   font-size:17px;
   font-weight:bold;
   cursor:pointer;
-  touch-action:manipulation;
 }
 .whatsapp-button{background:#168b48;margin-top:12px}
 .fixed-bar{
@@ -226,26 +213,14 @@ label{font-size:13px;font-weight:bold}
   font-size:15px;
   cursor:pointer;
 }
-.notice{
-  font-size:12px;
-  color:#777;
-  line-height:1.7;
-  margin-top:10px;
-}
-.error{
-  color:#b3261e;
-  font-size:13px;
-  margin-top:8px;
-  display:none;
-}
-@media(max-width:420px){
-  .colors-grid{grid-template-columns:repeat(4,minmax(0,1fr));gap:9px 6px}
-  .color-card{padding:8px 3px}
-  .swatch{width:37px;height:37px}
-  .color-name{font-size:11px}
-  .offers{gap:8px}
-  .offer{padding:12px 5px}
-  .offer strong{font-size:18px}
+.notice{font-size:12px;color:#777;line-height:1.7;margin-top:10px}
+.error{color:#b3261e;font-size:13px;margin-top:8px;display:none}
+
+@media(max-width:360px){
+  .colors-grid{gap:10px 7px}
+  .color-card{padding:9px 3px}
+  .quantity{gap:5px}
+  .quantity button{flex-basis:29px;width:29px;height:30px;line-height:30px}
 }
 </style>
 </head>
@@ -259,217 +234,215 @@ label{font-size:13px;font-weight:bold}
 
 <main class="container">
 
-  <img class="hero"
-  src="https://drive.google.com/thumbnail?id=18_Pz1LwmHocA_5fG_Hy7eQ2d9gmRqqPw&sz=w1600"
-  alt="ليجن ديربي مضلع">
+<img class="hero"
+src="https://drive.google.com/thumbnail?id=18_Pz1LwmHocA_5fG_Hy7eQ2d9gmRqqPw&sz=w1600"
+alt="ليجن ديربي مضلع">
 
-  <section class="section">
-    <h2>ليجن ديربي مضلع</h2>
-    <p class="subtitle">قطن ليكرا مرن ومريح في اللبس</p>
-    <div style="line-height:2;font-size:14px">
-      ✔️ خامة قطن ليكرا مريحة<br>
-      ✔️ فري سايز يناسب من 50 إلى 100 كيلو<br>
-      ✔️ متوفر بـ 16 لون
-    </div>
-  </section>
+<section class="section">
+<h2>ليجن ديربي مضلع</h2>
+<p class="subtitle">قطن ليكرا مرن ومريح في اللبس</p>
+<div style="line-height:2;font-size:14px">
+✔️ خامة قطن ليكرا مريحة<br>
+✔️ فري سايز يناسب من 50 إلى 100 كيلو<br>
+✔️ متوفر بـ 16 لون
+</div>
+</section>
 
-  <section class="section">
-    <h2>اختاري العرض المناسب ليكي</h2>
-    <p class="subtitle">اضغطي على مربع العرض بالكامل لاختياره</p>
+<section class="section">
+<h2>اختاري العرض المناسب ليكي</h2>
+<p class="subtitle">اضغطي على العرض، وتقدري تزودي عدد القطع براحتك</p>
 
-    <div class="offers">
-      <div class="offer" id="offer4" onclick="chooseOffer(4)">
-        <strong>4 قطع</strong>
-        <div class="details">سعر القطعة 75 جنيه</div>
-        <span class="total">300 جنيه</span>
-        <button type="button">اختاري العرض</button>
-      </div>
+<div class="offers">
 
-      <div class="offer" id="offer5" onclick="chooseOffer(5)">
-        <strong>5 قطع</strong>
-        <div class="details">سعر القطعة 75 جنيه</div>
-        <span class="total">375 جنيه</span>
-        <button type="button">اختاري العرض</button>
-      </div>
+<div class="offer" id="offer4" onclick="chooseOffer(4)">
+<strong>4 قطع</strong>
+<div class="details">سعر القطعة 75 جنيه</div>
+<span class="total">300 جنيه</span>
+<button type="button">اختاري العرض</button>
+</div>
 
-      <div class="offer" id="offer6" onclick="chooseOffer(6)">
-        <strong>6 قطع</strong>
-        <div class="details">سعر القطعة 70 جنيه</div>
-        <span class="total">420 جنيه</span>
-        <button type="button">اختاري العرض</button>
-      </div>
+<div class="offer" id="offer5" onclick="chooseOffer(5)">
+<strong>5 قطع</strong>
+<div class="details">سعر القطعة 75 جنيه</div>
+<span class="total">375 جنيه</span>
+<button type="button">اختاري العرض</button>
+</div>
 
-      <div class="offer" id="offer7" onclick="chooseOffer(7)">
-        <strong>7 قطع</strong>
-        <div class="details">سعر القطعة 70 جنيه</div>
-        <span class="total">490 جنيه</span>
-        <button type="button">اختاري العرض</button>
-      </div>
+<div class="offer" id="offer6" onclick="chooseOffer(6)">
+<strong>6 قطع</strong>
+<div class="details">سعر القطعة 70 جنيه</div>
+<span class="total">420 جنيه</span>
+<button type="button">اختاري العرض</button>
+</div>
 
-      <div class="offer" id="offer8" onclick="chooseOffer(8)">
-        <strong>8 قطع</strong>
-        <div class="details">سعر القطعة 70 جنيه</div>
-        <span class="total">560 جنيه</span>
-        <button type="button">اختاري العرض</button>
-      </div>
+<div class="offer" id="offer7" onclick="chooseOffer(7)">
+<strong>7 قطع</strong>
+<div class="details">سعر القطعة 70 جنيه</div>
+<span class="total">490 جنيه</span>
+<button type="button">اختاري العرض</button>
+</div>
 
-      <div class="offer" id="offer9" onclick="chooseOffer(9)">
-        <strong>9 قطع</strong>
-        <div class="details">سعر القطعة 70 جنيه</div>
-        <span class="total">630 جنيه</span>
-        <button type="button">اختاري العرض</button>
-      </div>
+<div class="offer" id="offer8" onclick="chooseOffer(8)">
+<strong>8 قطع</strong>
+<div class="details">سعر القطعة 70 جنيه</div>
+<span class="total">560 جنيه</span>
+<button type="button">اختاري العرض</button>
+</div>
 
-      <div class="offer" id="offer10" onclick="chooseOffer(10)" style="grid-column:1/-1">
-        <strong>10 قطع أو أكثر 🔥</strong>
-        <div class="details">سعر القطعة 65 جنيه</div>
-        <span class="total">650 جنيه للـ 10 قطع</span>
-        <button type="button">اختاري العرض</button>
-      </div>
-    </div>
-    <div class="error" id="offerError">اختاري العرض الأول علشان تقدري تحددي الألوان.</div>
-  </section>
+<div class="offer" id="offer9" onclick="chooseOffer(9)">
+<strong>9 قطع</strong>
+<div class="details">سعر القطعة 70 جنيه</div>
+<span class="total">630 جنيه</span>
+<button type="button">اختاري العرض</button>
+</div>
 
-  <section class="section">
-    <h2>اختاري الألوان والكميات</h2>
-    <div class="counter">
-      عدد القطع المختارة: <span id="selectedCount">0</span>
-      <div class="notice" id="selectionHint">اختاري العرض أولاً.</div>
-    </div>
+<div class="offer" id="offer10" onclick="chooseOffer(10)" style="grid-column:1/-1">
+<strong>10 قطع أو أكثر 🔥</strong>
+<div class="details">سعر القطعة 65 جنيه</div>
+<span class="total">650 جنيه للـ 10 قطع</span>
+<button type="button">اختاري العرض</button>
+</div>
 
-    <div class="colors-grid" id="colorsGrid"></div>
-    <div class="error" id="quantityError"></div>
-  </section>
+</div>
+<div class="error" id="offerError">اختاري العرض الأول.</div>
+</section>
 
-  <section class="section">
-    <h2>بيانات التوصيل</h2>
+<section class="section">
+<h2>اختاري الألوان والكميات</h2>
+<div class="counter">
+عدد القطع المختارة: <span id="selectedCount">0</span>
+<div class="notice" id="selectionHint">اختاري العرض الأول.</div>
+</div>
+<div class="colors-grid" id="colorsGrid"></div>
+<div class="error" id="quantityError"></div>
+</section>
 
-    <label>الاسم بالكامل</label>
-    <input id="customerName" type="text" placeholder="اكتبي اسمك">
+<section class="section">
+<h2>بيانات التوصيل</h2>
 
-    <label>رقم الموبايل</label>
-    <input id="phone" type="tel" inputmode="tel" placeholder="رقم الموبايل">
+<label>الاسم بالكامل</label>
+<input id="customerName" type="text" placeholder="اكتبي اسمك">
 
-    <label>رقم بديل (اختياري)</label>
-    <input id="phone2" type="tel" inputmode="tel" placeholder="رقم بديل">
+<label>رقم الموبايل</label>
+<input id="phone" type="tel" inputmode="tel" placeholder="رقم الموبايل">
 
-    <label>المحافظة</label>
-    <select id="governorate" onchange="updateShipping()">
-      <option value="">اختاري المحافظة</option>
-      <option>القاهرة</option>
-      <option>الجيزة</option>
-      <option>الإسكندرية</option>
-      <option>القليوبية</option>
-      <option>البحيرة</option>
-      <option>كفر الشيخ</option>
-      <option>الغربية</option>
-      <option>المنوفية</option>
-      <option>الدقهلية</option>
-      <option>دمياط</option>
-      <option>الشرقية</option>
-      <option>الإسماعيلية</option>
-      <option>بورسعيد</option>
-      <option>السويس</option>
-      <option>شمال سيناء</option>
-      <option>جنوب سيناء</option>
-      <option>بني سويف</option>
-      <option>الفيوم</option>
-      <option>المنيا</option>
-      <option>أسيوط</option>
-      <option>سوهاج</option>
-      <option>قنا</option>
-      <option>الأقصر</option>
-      <option>أسوان</option>
-      <option>الوادي الجديد</option>
-      <option>البحر الأحمر</option>
-      <option>مطروح</option>
-    </select>
+<label>رقم بديل (اختياري)</label>
+<input id="phone2" type="tel" inputmode="tel" placeholder="رقم بديل">
 
-    <label>العنوان بالتفصيل</label>
-    <textarea id="address" rows="3" placeholder="المنطقة والشارع ورقم العقار وأقرب علامة مميزة"></textarea>
+<label>المحافظة</label>
+<select id="governorate" onchange="updateInvoice()">
+<option value="">اختاري المحافظة</option>
+<option>القاهرة</option>
+<option>الجيزة</option>
+<option>الإسكندرية</option>
+<option>القليوبية</option>
+<option>البحيرة</option>
+<option>كفر الشيخ</option>
+<option>الغربية</option>
+<option>المنوفية</option>
+<option>الدقهلية</option>
+<option>دمياط</option>
+<option>الشرقية</option>
+<option>الإسماعيلية</option>
+<option>بورسعيد</option>
+<option>السويس</option>
+<option>شمال سيناء</option>
+<option>جنوب سيناء</option>
+<option>بني سويف</option>
+<option>الفيوم</option>
+<option>المنيا</option>
+<option>أسيوط</option>
+<option>سوهاج</option>
+<option>قنا</option>
+<option>الأقصر</option>
+<option>أسوان</option>
+<option>الوادي الجديد</option>
+<option>البحر الأحمر</option>
+<option>مطروح</option>
+</select>
 
-    <div class="notice">مصاريف الشحن يتم تأكيدها حسب عنوان التوصيل.</div>
-  </section>
+<label>العنوان بالتفصيل</label>
+<textarea id="address" rows="3" placeholder="المنطقة والشارع ورقم العقار وأقرب علامة مميزة"></textarea>
 
-  <section class="section">
-    <h2>فاتورة طلبك</h2>
-    <div class="summary" id="invoice">
-      اختاري العرض والألوان لعرض الفاتورة.
-    </div>
-    <button class="main-button whatsapp-button" type="button" onclick="reviewOrder()">
-      تأكيد الطلب عبر واتساب
-    </button>
-    <div class="error" id="formError"></div>
-  </section>
+<div class="notice">مصاريف الشحن يتم تأكيدها حسب عنوان التوصيل.</div>
+</section>
 
-  <section class="section">
-    <h2>اطلبي وإنتِ مطمّنة ❤️</h2>
-    <div class="policy">
-      ✔ متاح معاينة المنتج عند الاستلام.<br>
-      ✔ من حقك التأكد من المنتج قبل الاستلام.<br>
-      ✔ لو فيه أي مشكلة في المنتج أو مش مطابق لطلبك، من حقك رفض الاستلام.<br>
-      ثقتنا في جودة منتجاتنا هي أساس تعاملنا معاكِ.
-    </div>
-  </section>
+<section class="section">
+<h2>فاتورة طلبك</h2>
+<div class="summary" id="invoice">اختاري العرض والألوان لعرض الفاتورة.</div>
+<button class="main-button whatsapp-button" type="button" onclick="reviewOrder()">
+تأكيد الطلب عبر واتساب
+</button>
+<div class="error" id="formError"></div>
+</section>
+
+<section class="section">
+<h2>اطلبي وإنتِ مطمّنة ❤️</h2>
+<div class="policy">
+✔ متاح معاينة المنتج عند الاستلام.<br>
+✔ من حقك التأكد من المنتج قبل الاستلام.<br>
+✔ لو فيه أي مشكلة في المنتج أو مش مطابق لطلبك، من حقك رفض الاستلام.<br>
+ثقتنا في جودة منتجاتنا هي أساس تعاملنا معاكِ.
+</div>
+</section>
 
 </main>
 
 <div class="fixed-bar">
-  <div class="fixed-inner">
-    <div class="fixed-total">
-      إجمالي الطلب
-      <strong id="fixedTotal">0 جنيه</strong>
-    </div>
-    <button type="button" onclick="reviewOrder()">اطلبي الآن</button>
-  </div>
+<div class="fixed-inner">
+<div class="fixed-total">
+إجمالي الطلب
+<strong id="fixedTotal">0 جنيه</strong>
+</div>
+<button type="button" onclick="reviewOrder()">اطلبي الآن</button>
+</div>
 </div>
 
 <script>
 const WHATSAPP_NUMBER = "201080239769";
 
 const colors = [
-  {name:"أسود",hex:"#171717"},
-  {name:"أبيض",hex:"#ffffff"},
-  {name:"أوف وايت",hex:"#eee9dc"},
-  {name:"كحلي",hex:"#172747"},
-  {name:"أزرق",hex:"#2875b9"},
-  {name:"كشمير",hex:"#bd929e"},
-  {name:"بيبي بينك",hex:"#f5c5d4"},
-  {name:"بنفسجي",hex:"#79518e"},
-  {name:"بني",hex:"#68412f"},
-  {name:"كافيه",hex:"#b99a79"},
-  {name:"زيتي",hex:"#59633b"},
-  {name:"بترولي",hex:"#155b61"},
-  {name:"جنزاري",hex:"#278c91"},
-  {name:"فوشيا",hex:"#df3684"},
-  {name:"بيج",hex:"#d9c6a5"},
-  {name:"رصاصي",hex:"#929292"}
+{name:"أسود",hex:"#171717"},
+{name:"أبيض",hex:"#ffffff"},
+{name:"أوف وايت",hex:"#eee9dc"},
+{name:"كحلي",hex:"#172747"},
+{name:"أزرق",hex:"#2875b9"},
+{name:"كشمير",hex:"#bd929e"},
+{name:"بيبي بينك",hex:"#f5c5d4"},
+{name:"بنفسجي",hex:"#79518e"},
+{name:"بني",hex:"#68412f"},
+{name:"كافيه",hex:"#b99a79"},
+{name:"زيتي",hex:"#59633b"},
+{name:"بترولي",hex:"#155b61"},
+{name:"جنزاري",hex:"#278c91"},
+{name:"فوشيا",hex:"#df3684"},
+{name:"بيج",hex:"#d9c6a5"},
+{name:"رصاصي",hex:"#929292"}
 ];
 
 let selected = {};
 let chosenOffer = 0;
-let targetCount = 0;
 
 function getCount(){
   return Object.values(selected).reduce((a,b)=>a+b,0);
 }
 
 function getUnitPrice(count){
-  if(count >= 10) return 65;
-  if(count >= 6) return 70;
-  if(count >= 4) return 75;
+  if(count>=10) return 65;
+  if(count>=6) return 70;
+  if(count>=4) return 75;
   return 0;
 }
 
 function chooseOffer(number){
-  if(getCount() > 0){
-    const ok = confirm("تغيير العرض سيؤدي إلى تصفير الألوان والكميات المختارة. هل تريدين المتابعة؟");
-    if(!ok) return;
+  if(getCount()>0){
+    if(!confirm("تغيير العرض سيؤدي إلى تصفير الألوان والكميات المختارة. هل تريدين المتابعة؟")){
+      return;
+    }
   }
 
-  selected = {};
-  chosenOffer = number;
-  targetCount = number;
+  selected={};
+  chosenOffer=number;
 
   document.querySelectorAll(".offer").forEach(el=>{
     el.classList.remove("selected");
@@ -478,45 +451,45 @@ function chooseOffer(number){
   document.getElementById("offer"+number).classList.add("selected");
 
   document.getElementById("offerError").style.display="none";
+  document.getElementById("quantityError").style.display="none";
+
   document.getElementById("selectionHint").textContent =
-    number === 10
-    ? "اختاري 10 قطع على الأقل، ويمكنك زيادة العدد."
-    : "اختاري "+number+" قطع بالضبط.";
+    "الحد الأدنى "+number+" قطع. تقدري تزودي العدد براحتك، والسعر يتغير تلقائيًا حسب الكمية.";
 
   renderColors();
   updateInvoice();
 }
 
 function renderColors(){
-  const grid = document.getElementById("colorsGrid");
-  grid.innerHTML = "";
+  const grid=document.getElementById("colorsGrid");
+  grid.innerHTML="";
 
   colors.forEach((color,index)=>{
-    const qty = selected[index] || 0;
+    const qty=selected[index]||0;
 
-    const card = document.createElement("div");
+    const card=document.createElement("div");
     card.className="color-card";
 
-    const swatch = document.createElement("div");
+    const swatch=document.createElement("div");
     swatch.className="swatch";
     swatch.style.background=color.hex;
 
-    const name = document.createElement("div");
+    const name=document.createElement("div");
     name.className="color-name";
     name.textContent=color.name;
 
-    const controls = document.createElement("div");
+    const controls=document.createElement("div");
     controls.className="quantity";
 
-    const minus = document.createElement("button");
+    const minus=document.createElement("button");
     minus.type="button";
     minus.textContent="−";
     minus.onclick=()=>changeColor(index,-1);
 
-    const number = document.createElement("span");
+    const number=document.createElement("span");
     number.textContent=qty;
 
-    const plus = document.createElement("button");
+    const plus=document.createElement("button");
     plus.type="button";
     plus.textContent="+";
     plus.onclick=()=>changeColor(index,1);
@@ -533,34 +506,22 @@ function changeColor(index,change){
     return;
   }
 
-  const current = selected[index] || 0;
-  const total = getCount();
+  const current=selected[index]||0;
 
-  if(change > 0){
-    if(chosenOffer !== 10 && total >= targetCount){
-      showQuantityError("وصلتي للعدد المطلوب في العرض. لو عايزة قطع أكتر اختاري عرض 10 قطع أو أكثر.");
-      return;
-    }
-
-    selected[index] = current + 1;
-
-    if(chosenOffer === 10){
-      targetCount = getCount();
-    }
+  if(change>0){
+    selected[index]=current+1;
   }else{
-    if(current <= 0) return;
+    if(current<=0) return;
 
-    if(chosenOffer === 10 && total <= 10){
-      showQuantityError("عرض 10 قطع أو أكثر لا يقل عن 10 قطع.");
+    const total=getCount();
+
+    if(total<=chosenOffer){
+      showQuantityError("لا يمكن تقليل العدد عن الحد الأدنى للعرض المختار.");
       return;
     }
 
-    selected[index] = current - 1;
-    if(selected[index] === 0) delete selected[index];
-
-    if(chosenOffer === 10){
-      targetCount = getCount();
-    }
+    selected[index]=current-1;
+    if(selected[index]===0) delete selected[index];
   }
 
   document.getElementById("quantityError").style.display="none";
@@ -590,10 +551,6 @@ function getShipping(){
   return 70;
 }
 
-function updateShipping(){
-  updateInvoice();
-}
-
 function updateInvoice(){
   const count=getCount();
   const unit=getUnitPrice(count);
@@ -602,39 +559,59 @@ function updateInvoice(){
   const total=products+shipping;
 
   document.getElementById("selectedCount").textContent=count;
-  document.getElementById("fixedTotal").textContent=total.toLocaleString("en-US")+" جنيه";
-
-  let colorsText="";
-
-  colors.forEach((color,index)=>{
-    const qty=selected[index]||0;
-    if(qty>0){
-      colorsText += `<div class="summary-row"><span>${color.name}</span><strong>${qty} قطعة</strong></div>`;
-    }
-  });
+  document.getElementById("fixedTotal").textContent=
+    (count ? total.toLocaleString("en-US")+" جنيه" : "0 جنيه");
 
   if(count===0){
-    document.getElementById("invoice").innerHTML="اختاري العرض والألوان لعرض الفاتورة.";
+    document.getElementById("invoice").innerHTML=
+      "اختاري العرض والألوان لعرض الفاتورة.";
     return;
   }
 
-  let offerText = chosenOffer===10 ? "10 قطع أو أكثر" : chosenOffer+" قطع";
+  let colorLines="";
+  colors.forEach((color,index)=>{
+    const qty=selected[index]||0;
+    if(qty>0){
+      colorLines+=`
+      <div class="summary-row">
+        <span>${color.name}</span>
+        <strong>${qty} قطعة</strong>
+      </div>`;
+    }
+  });
 
   document.getElementById("invoice").innerHTML=`
-    <div class="summary-row"><span>العرض المختار</span><strong>${offerText}</strong></div>
-    <div class="summary-row"><span>عدد القطع</span><strong>${count} قطعة</strong></div>
-    <div class="summary-row"><span>سعر القطعة</span><strong>${unit} جنيه</strong></div>
-    <div class="summary-row"><span>حساب المنتجات</span><strong>${count} × ${unit} = ${products} جنيه</strong></div>
-    ${colorsText}
-    <div class="summary-row"><span>الشحن</span><strong>${shipping ? shipping+" جنيه" : "يحدد حسب المحافظة"}</strong></div>
-    <div class="summary-row total-row"><span>الإجمالي</span><strong>${shipping ? total+" جنيه" : products+" جنيه + الشحن"}</strong></div>
+    <div class="summary-row">
+      <span>الحد الأدنى للعرض</span>
+      <strong>${chosenOffer} قطع</strong>
+    </div>
+    <div class="summary-row">
+      <span>عدد القطع المختارة</span>
+      <strong>${count} قطعة</strong>
+    </div>
+    <div class="summary-row">
+      <span>سعر القطعة</span>
+      <strong>${unit} جنيه</strong>
+    </div>
+    <div class="summary-row">
+      <span>حساب المنتجات</span>
+      <strong>${count} × ${unit} = ${products} جنيه</strong>
+    </div>
+    ${colorLines}
+    <div class="summary-row">
+      <span>الشحن</span>
+      <strong>${shipping ? shipping+" جنيه" : "يحدد حسب المحافظة"}</strong>
+    </div>
+    <div class="summary-row total-row">
+      <span>الإجمالي</span>
+      <strong>${shipping ? total+" جنيه" : products+" جنيه + الشحن"}</strong>
+    </div>
   `;
 }
 
 function reviewOrder(){
   const count=getCount();
   const formError=document.getElementById("formError");
-
   formError.style.display="none";
 
   if(!chosenOffer){
@@ -642,13 +619,8 @@ function reviewOrder(){
     return;
   }
 
-  if(chosenOffer===10 && count<10){
-    showFormError("عرض 10 قطع أو أكثر يتطلب اختيار 10 قطع على الأقل.");
-    return;
-  }
-
-  if(chosenOffer!==10 && count!==chosenOffer){
-    showFormError("لازم تختاري "+chosenOffer+" قطع بالضبط لإتمام الطلب.");
+  if(count<chosenOffer){
+    showFormError("لازم تختاري "+chosenOffer+" قطع على الأقل لإتمام الطلب.");
     return;
   }
 
@@ -658,7 +630,7 @@ function reviewOrder(){
   const governorate=document.getElementById("governorate").value;
   const address=document.getElementById("address").value.trim();
 
-  if(!name || !phone || !governorate || !address){
+  if(!name||!phone||!governorate||!address){
     showFormError("من فضلك اكتبي الاسم ورقم الموبايل والمحافظة والعنوان بالتفصيل.");
     return;
   }
@@ -672,19 +644,19 @@ function reviewOrder(){
   colors.forEach((color,index)=>{
     const qty=selected[index]||0;
     if(qty>0){
-      colorLines += `- ${color.name}: ${qty} قطعة\n`;
+      colorLines+=`- ${color.name}: ${qty} قطعة\n`;
     }
   });
 
-  const message =
+  const message=
 `طلب جديد من FORSA.COM
 
 المنتج: ليجن ديربي مضلع
 الخامة: قطن ليكرا
 المقاس: من 50 إلى 100 كيلو
 
-العرض المختار: ${chosenOffer===10 ? "10 قطع أو أكثر" : chosenOffer+" قطع"}
-عدد القطع: ${count}
+الحد الأدنى للعرض: ${chosenOffer} قطع
+عدد القطع النهائي: ${count}
 سعر القطعة: ${unit} جنيه
 حساب المنتجات: ${count} × ${unit} = ${products} جنيه
 
@@ -696,7 +668,7 @@ ${colorLines}
 بيانات العميل:
 الاسم: ${name}
 رقم الموبايل: ${phone}
-رقم بديل: ${phone2 || "غير متوفر"}
+رقم بديل: ${phone2||"غير متوفر"}
 المحافظة: ${governorate}
 العنوان: ${address}`;
 
